@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+html, body{
+
+    margin: 0 auto;
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    border: 0px;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+main{
+
+    margin: 60px 60px;
+
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+form {
+
+    margin-top: 50px;
+}
+
+form h1 {
+
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+form input{
+
+    padding: 6px;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid lightgray;
+}
+
+ul {
+
+    margin-top: 30px;
+}
+
+.todo-item{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-content {
+    list-style-type : none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.todo-content p {
+    padding-left: 5px;
+}
+
+.del {
+    -webkit-transform: perspective(800px) translateZ(-300px);
+    background: url('./img/icon-delete.svg') no-repeat;
+    width: 12px;
+    height: 12px;
+}
+
+.edit {
+    -webkit-transform: perspective(800px) translateZ(-300px);
+    background: url('./img/icon-edit.svg') no-repeat;
+    width: 12px;
+    height: 12px;
+}
+
+.invisible {
+
+    display: none;
+}
+
+.todo-input-text {
+
+    display: flex;
+}
+
+
+.todo-input-text input{
+
+    width: 100%;
+}
+
+.todo-input-text button {
+
+  padding: 15px;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: lightcoral;
+  font-size: 5px;
+  margin: 40px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    box-shadow: 0 2.5em 0 0;
   }
 }
